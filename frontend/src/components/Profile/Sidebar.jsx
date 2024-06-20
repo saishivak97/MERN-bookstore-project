@@ -17,23 +17,24 @@ const Sidebar = ({ ProfileData }) => {
         <p className="mt-1 text-normal text-zinc-300 ">{ProfileData.email}</p>
         <div className="w-full mt-4 h-[1px] bg-zinc-500 hidden lg:block"></div>
       </div>
+      <div>
       {role !== "admin" && (
         <div className="w-full  flex-col items-center justify-center hidden lg:flex">
           <Link
             to="/profile"
-            className="text-zinc-100 font-semibold w-full py-2 text-center hover:bg-zinc-900 rounded transition-all duration-300"
+            className="text-zinc-100 font-semibold w-full py-2 text-center hover:bg-white hover:text-violet-500 rounded transition-all duration-300"
           >
             Favourites
           </Link>
           <Link
             to="/profile/orderHistory"
-            className="text-zinc-100 font-semibold w-full  py-2 mt-4 text-center hover:bg-zinc-900 rounded transition-all duration-300"
+            className="text-zinc-100 font-semibold w-full  p-2 mt-4 text-center hover:bg-white hover:text-violet-500 rounded transition-all duration-300"
           >
             Order History
           </Link>
           <Link
             to="/profile/settings"
-            className="text-zinc-100 font-semibold w-full  py-2 mt-4 text-center hover:bg-zinc-900 rounded transition-all duration-300"
+            className="text-zinc-100 font-semibold w-full  py-2 mt-4 text-center hover:bg-white hover:text-violet-500 rounded transition-all duration-300"
           >
             Settings
           </Link>
@@ -43,20 +44,21 @@ const Sidebar = ({ ProfileData }) => {
         <div className="w-full  flex-col items-center justify-center hidden lg:flex">
           <Link
             to="/profile"
-            className="text-zinc-100 font-semibold w-full py-2 text-center hover:bg-zinc-900 rounded transition-all duration-300"
+            className="text-zinc-100 font-semibold w-full py-2 text-centerhover:bg-white hover:text-violet-500 rounded transition-all duration-300"
           >
             All Orders
           </Link>
           <Link
             to="/profile/add-book"
-            className="text-zinc-100 font-semibold w-full  py-2 mt-4 text-center hover:bg-zinc-900 rounded transition-all duration-300"
+            className="text-zinc-100 font-semibold w-full  py-2 mt-4 text-center hover:bg-white hover:text-violet-500 rounded transition-all duration-300"
           >
             Add Book
           </Link>
         </div>
       )}
+      </div>
       <button
-        className="bg-zinc-900 w-3/6 lg:w-full mt-4 lg:mt-0  text-white font-semibold flex items-center justify-center  py-2 rounded hover:bg-white hover:text-zinc-900 transition-all duration-300 "
+        className="bg-white w-3/6 lg:w-full mt-4 lg:mt-0  hover:text-violet-500 font-semibold flex items-center justify-center  py-2 rounded hover:bg-white text-zinc-900 transition-all duration-300 "
         onClick={() => {
           dispatch(authActions.logout());
           dispatch(authActions.changeRole("user"));

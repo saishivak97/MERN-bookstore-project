@@ -16,7 +16,7 @@ const RecentlyAdded = () => {
   return (
     <>
       {Books && (
-        <div className="bg-zinc-900 px-12 py-8">
+        <div className="bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 px-12 py-8">
           <h1 className="text-yellow-100 text-3xl">Recently Added Books</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-8 mt-8">
             {Books.map((items, i) => (

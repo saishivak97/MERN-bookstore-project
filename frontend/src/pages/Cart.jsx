@@ -67,7 +67,7 @@ const Cart = () => {
     }
   };
   return (
-    <div className="h-auto bg-zinc-900 px-12 py-8">
+    <div className="h-auto bg-white px-12 py-8">
       {!Cart && <Loader />}
       {Cart && Cart.length === 0 && (
         <div className="h-screen">
@@ -85,12 +85,12 @@ const Cart = () => {
       )}
       {Cart && Cart.length > 0 && (
         <>
-          <h1 className="text-5xl font-semibold text-zinc-500 mb-8">
+          <h1 className="text-3xl font-semibold text-zinc-500 mb-8">
             Your Cart
           </h1>
           {Cart.map((items, i) => (
             <div
-              className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-zinc-800 justify-between items-center"
+              className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-purple-800 justify-between items-center"
               key={i}
             >
               <img
@@ -129,16 +129,17 @@ const Cart = () => {
       )}
       {Cart && Cart.length > 0 && (
         <div className="mt-4 w-full flex items-center justify-end ">
-          <div className="p-4 bg-zinc-800 rounded">
+          <div className="p-4 bg-violet-800 rounded">
             <h1 className="text-3xl text-zinc-200 font-semibold">
               Total Amount
             </h1>
-            <div className="mt-3 flex items-center justify-between text-xl text-zinc-200">
-              <h2>{Cart.length} books</h2> <h2>₹ {Total}</h2>
+            <div className="mt-3 flex-col items-center justify-between text-xl text-zinc-200">
+              <h2 className="text-lg">Books quantity :<span className=""> {Cart.length}</span></h2>
+              <h2> Total price ₹ <span className="text-green-100">{Total}</span></h2>
             </div>
             <div className="w-[100%] mt-3">
               <button
-                className="bg-zinc-100 rounded px-4 py-2 flex justify-center w-full  font-semibold hover:bg-zinc-200"
+                className="bg-zinc-100 rounded px-4 py-2 flex justify-center w-full  font-semibold hover:bg-zinc-200 hover:text-purple-500"
                 onClick={PlaceOrder}
               >
                 Place your order

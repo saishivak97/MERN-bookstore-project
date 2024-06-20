@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="relative flex w-full flex-nowrap items-center justify-between bg-zinc-800 py-2 text-white  lg:flex-wrap lg:justify-start lg:py-4"
+        className="relative flex w-full flex-nowrap items-center justify-between bg-violet-950 py-2 text-white  lg:flex-wrap lg:justify-start lg:py-4"
         data-twe-navbar-ref
       >
         <div className="flex w-full flex-wrap items-center justify-between px-3">
@@ -51,11 +51,11 @@ const Navbar = () => {
               className="flex text-2xl font-semibold items-center justify-center "
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/128/10433/10433049.png"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzG_C-wHYIs98wg_GGrzDIhFuq3buWIQIJcw&s"
                 alt="logo"
-                className="h-10 me-4"
+                className="h-12 rounded me-4"
               />{" "}
-              BookHeaven
+              <p className="text-white">BookStore</p>
             </Link>
           </div>
           <div className=" w-1/6 block  lg:hidden">
@@ -112,7 +112,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     to="/signup"
-                    className="rounded  bg-blue-500 px-3 py-1 mx-3 hover:bg-white hover:text-zinc-900 transition-all duration-300"
+                    className="rounded  bg-violet-400 px-3 py-1 mx-3 hover:bg-white hover:text-zinc-900 transition-all duration-300"
                   >
                     SignUp
                   </Link>
@@ -122,13 +122,13 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className={`5/6 ${Nav} lg:hidden bg-zinc-800  text-white px-12`}>
-        <div className="flex flex-col items-center">
+      <div className={`5/6 ${Nav} lg:hidden bg-white text-purple-800 px-12`}>
+        <div className="flex flex-col items-start">
           {links.map((items, i) => (
             <>
               {items.title === "Profile" || items.title === "Admin Profile" ? (
                 <div
-                  className=" rounded  hover:cursor-pointer border border-blue-500 px-3 py-1 my-3 hover:bg-white hover:text-zinc-900 transition-all duration-300"
+                  className=" rounded  hover:cursor-pointer border px-3 py-1 my-3 bg-purple-800 text-white hover:bg-white hover:text-purple-800 transition-all duration-300"
                   key={i}
                 >
                   <Link

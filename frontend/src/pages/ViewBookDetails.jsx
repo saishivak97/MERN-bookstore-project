@@ -69,9 +69,9 @@ const ViewBookDetails = () => {
     <>
       {!Book && <Loader />}
       {Book && (
-        <div className="bg-zinc-900  px-12 py-8 flex flex-col lg:flex-row gap-8 h-auto">
+        <div className="bg-white  px-12 py-8 flex flex-col lg:flex-row gap-8 h-auto">
           <div className="w-full lg:w-3/6 ">
-            <div className=" flex flex-col md:flex-row items-start justify-around  bg-zinc-800 rounded px-4 py-8 gap-4 ">
+            <div className=" flex flex-col md:flex-row items-start justify-around  bg-purple-800 rounded-2xl px-4 py-8 gap-4 ">
               <img
                 src={Book.url}
                 alt="book"
@@ -82,7 +82,7 @@ const ViewBookDetails = () => {
                   {role !== "admin" && (
                     <>
                       <button
-                        className="bg-white p-3 rounded md:rounded-full text-2xl font-semibold hover:bg-zinc-200 transition-all duration-300 flex items-center"
+                        className="bg-white p-3 rounded md:rounded-full text-2xl font-semibold hover:bg-violet-200 transition-all duration-300 flex items-center text-red-500"
                         onClick={addToFavourite}
                       >
                         <GoHeartFill />
@@ -118,16 +118,16 @@ const ViewBookDetails = () => {
             </div>
           </div>
           <div className="w-full lg:w-3/6 my-8">
-            <h1 className="text-4xl text-zinc-300 font-semibold">
+            <h1 className="text-4xl text-violet-600 font-semibold">
               {Book.title}
             </h1>
-            <p className="text-zinc-400 mt-1">by {Book.author}</p>
+            <p className="text-purple-400 mt-1">by {Book.author}</p>
             <p className="text-zinc-500 mt-4 text-xl">{Book.desc}</p>
             <p className="flex mt-4 items-center justify-start text-zinc-400">
-              <GrLanguage className="me-3" /> {Book.language}
+              <GrLanguage className="me-3 bg-purple-500 rounded text-white" /> {Book.language}
             </p>
-            <p className="mt-4 text-zinc-100 text-3xl font-semibold">
-              Price : ₹ {Book.price}{" "}
+            <p className="mt-4 text-zinc-500 text-3xl font-semibold">
+              Price : <span className="text-green-700">₹ {Book.price}{" "}</span>
             </p>
           </div>
         </div>

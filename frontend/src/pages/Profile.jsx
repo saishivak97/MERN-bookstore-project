@@ -33,10 +33,10 @@ const Profile = () => {
   return (
     <>
       {!ProfileData && <Loader />}
-      <div className="h-auto bg-zinc-900 px-2 md:px-8 py-8 flex flex-col lg:flex-row gap-4">
+      <div className="h-auto bg-white px-2 md:px-8 py-8 flex flex-col lg:flex-row gap-4">
         {ProfileData && (
           <>
-            <div className="h-auto lg:h-[80vh] w-full lg:w-1/6 bg-zinc-800 rounded-lg">
+            <div className="h-auto lg:h-[80vh] w-full lg:w-1/6 bg-purple-800 rounded-lg">
               <Sidebar ProfileData={ProfileData} />
             </div>
             {/* Mobile Bar  */}

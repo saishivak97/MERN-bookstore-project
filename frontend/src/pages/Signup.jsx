@@ -43,9 +43,9 @@ const Signup = () => {
     }
   };
   return (
-    <div className="h-auto bg-zinc-900 px-12 py-8 flex items-center justify-center">
-      <div className="bg-zinc-800 rounded-lg px-8 py-5 w-full md:w-3/6 lg:w-2/6">
-        <p className="text-zinc-200 text-xl">Sign Up</p>
+    <div className="h-auto bg-white px-12 py-8 flex items-center justify-center">
+      <div className="bg-white shadow-2xl	 border-2 rounded-lg px-8 py-5 w-full md:w-3/6 lg:w-2/6">
+        <p className="text-zinc-500 text-xl">Sign Up</p>
         <div className="mt-4">
           <div>
             <label htmlFor="" className="text-zinc-400">
@@ -53,7 +53,7 @@ const Signup = () => {
             </label>
             <input
               type="text"
-              className="w-full mt-2 bg-zinc-900 text-zinc-100 p-2 outline-none"
+              className="w-full mt-2 bg-white border-2 text-zinc-500 p-2 outline-none"
               placeholder="username"
               name="username"
               required
@@ -67,7 +67,7 @@ const Signup = () => {
             </label>
             <input
               type="text"
-              className="w-full mt-2 bg-zinc-900 text-zinc-100 p-2 outline-none"
+              className="w-full mt-2  bg-white border-2 text-zinc-500 p-2 outline-none"
               placeholder="xyz@example.com"
               name="email"
               required
@@ -81,7 +81,7 @@ const Signup = () => {
             </label>
             <input
               type="password"
-              className="w-full mt-2 bg-zinc-900 text-zinc-100 p-2 outline-none "
+              className="w-full mt-2  bg-white border-2 text-zinc-500 p-2 outline-none "
               placeholder="password"
               name="password"
               required
@@ -94,7 +94,7 @@ const Signup = () => {
               Address
             </label>
             <textarea
-              className="w-full mt-2 bg-zinc-900 text-zinc-100 p-2 outline-none "
+              className="w-full mt-2  bg-white border-2 text-zinc-500 p-2 outline-none "
               rows="5"
               placeholder="address"
               name="address"

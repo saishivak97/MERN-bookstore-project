@@ -34,8 +34,8 @@ const Favourite = () => {
         </div>
       )}
       {FavBooks && (
-        <div className="">
-          <h1 className="text-3xl md:text-5xl font-semibold text-zinc-500 mb-8">
+        <div className="h-[80vh] border-2 rounded-xl border-purple-500 overflow-scroll">
+          <h1 className="text-lg md:text-3xl font-semibold text-violet-500 m-4">
             Favourite books
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8">

@@ -20,14 +20,14 @@ const BookCard = ({ image, title, author, price, bookid, fav }) => {
     }
   };
   return (
-    <div className="w-full bg-zinc-800 text-zinc-100 rounded p-4">
+    <div className="w-full bg-white text-violet-500 rounded border-2  m-2 p-4">
       <Link to={`/view-book-details/${bookid}`} className="">
-        <div className="w-full flex items-center justify-center bg-zinc-900 ">
-          <img src={image} alt="book" className="h-40 object-cover" />
+        <div className="flex items-center justify-center bg-purple-100">
+          <img src={image}  alt="book" className="w-full object-cover h-1/2"/>
         </div>
         <h1 className="mt-4 text-xl font-semibold">{title}</h1>
-        <p className="mt-2 text-zinc-400 font-semibold">by {author}</p>
-        <p className="mt-2 text-zinc-200 font-semibold text-xl">₹ {price}</p>
+        <p className="mt-2 text-purple-400 font-semibold">by {author}</p>
+        <p className="mt-2 text-black font-semibold text-xl">₹ {price}</p>
       </Link>
       {fav === true && (
         <button
