@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 import BookCard from "../components/Books/BookCard";
 import axios from "axios";
 import Loader from "./Loader";
+
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const AllBooks = () => {
   const [Books, setBooks] = useState();
   useEffect(() => {
     window.scrollTo(0, 0);
     const fetch = async () => {
       const response = await axios.get(
-        "http://localhost:1000/api/v1/get-all-books"
+        `${backendUrl}/api/v1/get-all-books`
       );
       setBooks(response.data.data);
     };

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const Signup = () => {
   const history = useNavigate();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -31,7 +33,7 @@ const Signup = () => {
         alert("All fields are required");
       } else {
         const response = await axios.post(
-          "http://localhost:1000/api/v1/sign-up",
+          `${backendUrl}/api/v1/sign-up`,
           Data
         );
         setData({ username: "", email: "", password: "", address: "" });

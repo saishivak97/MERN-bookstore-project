@@ -7,6 +7,8 @@ import Sidebar from "../components/Profile/Sidebar";
 import Loader from "./Loader";
 import MobileBar from "../components/Profile/MobileBar";
 
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const Profile = () => {
   const [ProfileData, setProfileData] = useState();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -22,7 +24,7 @@ const Profile = () => {
     } else {
       const fetch = async () => {
         const response = await axios.get(
-          "http://localhost:1000/api/v1/getUserData",
+          `${backendUrl}/api/v1/getUserData`,
           { headers }
         );
         setProfileData(response.data);

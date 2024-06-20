@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const OrderHistory = () => {
   const [OrderHistory, setOrderHistory] = useState();
   const headers = {
@@ -11,7 +14,7 @@ const OrderHistory = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        "http://localhost:1000/api/v1/get-order-history",
+        `${backendUrl}/api/v1/get-order-history`,
         { headers }
       );
 

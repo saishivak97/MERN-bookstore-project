@@ -4,6 +4,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
+
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const Cart = () => {
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -22,7 +25,7 @@ const Cart = () => {
     } else {
       const fetch = async () => {
         const res = await axios.get(
-          "http://localhost:1000/api/v1/get-user-cart",
+          `${backendUrl}/api/v1/get-user-cart`,
           { headers }
         );
 
@@ -44,7 +47,7 @@ const Cart = () => {
   const deletItem = async (id) => {
     try {
       const response = await axios.put(
-        `http://localhost:1000/api/v1/remove-from-cart/${id}`,
+        `${backendUrl}/api/v1/remove-from-cart/${id}`,
         {},
         { headers }
       );
@@ -56,7 +59,7 @@ const Cart = () => {
   const PlaceOrder = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:1000/api/v1/place-order`,
+        `${backendUrl}/api/v1/place-order`,
         { order: Cart },
         { headers }
       );

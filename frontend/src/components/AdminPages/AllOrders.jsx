@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { IoOpenOutline } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
 import SeeUserData from "./SeeUserData";
+
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const AllOrders = () => {
   const [OrderHistory, setOrderHistory] = useState();
   const [userDiv, setuserDiv] = useState("hidden");
@@ -20,10 +23,10 @@ const AllOrders = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        "http://localhost:1000/api/v1/get-all-orders",
+        `${backendUrl}/api/v1/get-all-orders`,
         { headers }
       );
-
+      //urllllllllllllllllllllllllll
       setOrderHistory(res.data.data);
     };
     fetch();
@@ -36,12 +39,13 @@ const AllOrders = () => {
   const submitChanges = async (i) => {
     const id = OrderHistory[i]._id;
     const response = await axios.put(
-      `http://localhost:1000/api/v1/update-status/${id}`,
+      `${backendUrl}/api/v1/update-status/${id}`,
       Values,
       { headers }
     );
     alert(response.data.message);
   };
+  //urlllllllllllllllllllllllll
 
   return (
     <>

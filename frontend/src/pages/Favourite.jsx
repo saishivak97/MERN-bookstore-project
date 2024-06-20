@@ -2,6 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import BookCard from "../components/Books/BookCard";
 import Loader from "./Loader";
+
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const Favourite = () => {
   const [FavBooks, setFavBooks] = useState();
   const headers = {
@@ -11,7 +14,7 @@ const Favourite = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        "http://localhost:1000/api/v1/get-favourite-books",
+        `${backendUrl}/api/v1/get-favourite-books`,
         { headers }
       );
 

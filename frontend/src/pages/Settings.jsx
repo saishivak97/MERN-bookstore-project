@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
 import axios from "axios";
+
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const Settings = () => {
   const [ProfileData, setProfileData] = useState();
   const [Value, setValue] = useState({ address: "" });
@@ -16,7 +19,7 @@ const Settings = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "http://localhost:1000/api/v1/getUserData",
+        `${backendUrl}/api/v1/getUserData`,
         { headers }
       );
       setProfileData(response.data);
@@ -27,7 +30,7 @@ const Settings = () => {
 
   const updateAddress = async () => {
     const res = await axios.put(
-      "http://localhost:1000/api/v1/update-user-address",
+      `${backendUrl}/api/v1/update-user-address`,
       Value,
       {
         headers,

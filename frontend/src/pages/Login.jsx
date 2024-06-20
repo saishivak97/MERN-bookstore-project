@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { authActions } from "../store/auth";
 
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const Login = () => {
   const [Data, setData] = useState({ username: "", password: "" });
   const history = useNavigate();
@@ -24,7 +26,7 @@ const Login = () => {
         alert("All fields are required");
       } else {
         const response = await axios.post(
-          "http://localhost:1000/api/v1/login",
+          `${backendUrl}/api/v1/login`,
           Data
         );
         setData({ username: "", password: "" });

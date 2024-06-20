@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+
+let backendUrl = "https://mern-bookstore-project.onrender.com"
+
 const UpdateBooks = () => {
   const { id } = useParams();
   const history = useNavigate();
@@ -16,7 +19,7 @@ const UpdateBooks = () => {
     window.scrollTo(0, 0);
     const fetch = async () => {
       const res = await axios.get(
-        `http://localhost:1000/api/v1/get-book-by-id/${id}`
+        `${backendUrl}/api/v1/get-book-by-id/${id}`
       );
 
       setData({
@@ -53,7 +56,7 @@ const UpdateBooks = () => {
         alert("All fields are required");
       } else {
         const response = await axios.put(
-          "http://localhost:1000/api/v1/update-book",
+          "${backendUrl}/api/v1/update-book",
           Data,
           { headers }
         );
