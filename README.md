@@ -8,7 +8,7 @@ Certainly! Here's the complete README file for your MERN Bookstore project:
 
 This project is a comprehensive MERN stack web application for a bookstore, featuring user authentication, book management, and order processing.
 
-## Key Features
+## Key Features frontend
 
 - **User Authentication**: Secure user login and registration using JWT tokens.
 - **Book Management**: CRUD operations for managing books.
@@ -130,18 +130,10 @@ This project is a comprehensive MERN stack web application for a bookstore, feat
 - **GET** `/api/user/getUserData`: Get user profile data.
 - **PUT** `/api/user/update-user-address`: Update user address.
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
 
 - Special thanks to [Render](https://render.com) for hosting the frontend and backend of this project.
 
----
 
-This README file provides a comprehensive overview of your project, including its features, technologies used, installation instructions, folder structure, API endpoints, and more. Adjust the content as per your specific project details and preferences.
